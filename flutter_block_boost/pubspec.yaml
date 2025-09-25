@@ -1,0 +1,22 @@
+name: flutter_block_boost
+description: "Base flutter_bloc extensions."
+version: 1.0.0
+homepage: https://github.com/yourAnswer-ch/flutter_bloc_boost
+
+environment:
+  sdk: ^3.9.2
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flutter_bloc: ^9.1.1
+  stream_transform: ^2.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+
