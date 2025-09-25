@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_block_boost/blocs/events/base_event.dart';
-import 'package:flutter_block_boost/blocs/states/base_state.dart';
-import 'package:flutter_block_boost/blocs/states/error_state.dart';
+import 'package:flutter_bloc_boost/blocs/events/base_event.dart';
+import 'package:flutter_bloc_boost/blocs/states/base_state.dart';
+import 'package:flutter_bloc_boost/blocs/states/error_state.dart';
 
 abstract class SaveBloc<Event extends BaseEvent, State extends BaseState>
     extends Bloc<Event, State> {

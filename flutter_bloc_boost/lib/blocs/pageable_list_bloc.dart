@@ -1,15 +1,15 @@
 import 'dart:async';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_block_boost/blocs/events/load_by_id.dart';
-import 'package:flutter_block_boost/blocs/events/load_data.dart';
-import 'package:flutter_block_boost/blocs/events/load_page.dart';
-import 'package:flutter_block_boost/blocs/events/refresh_data.dart';
-import 'package:flutter_block_boost/blocs/pageable_list.dart';
-import 'package:flutter_block_boost/blocs/save_bloc.dart';
-import 'package:flutter_block_boost/blocs/states/loading_state.dart';
-import 'package:flutter_block_boost/blocs/states/no_content_state.dart';
-import 'package:flutter_block_boost/blocs/states/view_pageable_list.dart';
+import 'package:flutter_bloc_boost/blocs/events/load_by_id.dart';
+import 'package:flutter_bloc_boost/blocs/events/load_data.dart';
+import 'package:flutter_bloc_boost/blocs/events/load_page.dart';
+import 'package:flutter_bloc_boost/blocs/events/refresh_data.dart';
+import 'package:flutter_bloc_boost/blocs/pageable_list.dart';
+import 'package:flutter_bloc_boost/blocs/save_bloc.dart';
+import 'package:flutter_bloc_boost/blocs/states/loading_state.dart';
+import 'package:flutter_bloc_boost/blocs/states/no_content_state.dart';
+import 'package:flutter_bloc_boost/blocs/states/view_pageable_list.dart';
 import 'package:stream_transform/stream_transform.dart';
 
 

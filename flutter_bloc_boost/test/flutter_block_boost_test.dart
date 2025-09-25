@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:flutter_block_boost/flutter_block_boost.dart';
+import 'package:flutter_bloc_boost/flutter_bloc_boost.dart';
 
 void main() {
   test('adds one to input values', () {
