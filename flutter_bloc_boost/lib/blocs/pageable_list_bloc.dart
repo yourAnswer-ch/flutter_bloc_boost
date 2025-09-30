@@ -8,13 +8,12 @@ import 'package:flutter_bloc_boost/blocs/events/refresh_data.dart';
 import 'package:flutter_bloc_boost/blocs/pageable_list.dart';
 import 'package:flutter_bloc_boost/blocs/save_bloc.dart';
 import 'package:flutter_bloc_boost/blocs/states/loading_state.dart';
-import 'package:flutter_bloc_boost/blocs/states/no_content_state.dart';
-import 'package:flutter_bloc_boost/blocs/states/view_pageable_list.dart';
+import 'package:flutter_bloc_boost/blocs/states/pageable_list_state.dart';
 import 'package:stream_transform/stream_transform.dart';
 
 
 abstract class PageableListBloc<T> extends SaveBloc {
-  PageableListBloc() : super(NoContentState()) {
+  PageableListBloc(super.initialState) {
     on<LoadData>(loadData);
     on<LoadById>(loadById);
     on<RefreshData>(refreshData);
@@ -29,6 +28,12 @@ abstract class PageableListBloc<T> extends SaveBloc {
   void startLoading() {
     if (!isRunning) {
       add(LoadData(page: 1, pageSize: 40));
+    }
+  }
+
+  void loadNextPage() {
+    if (!isRunning && !list.endOfList) {
+      add(LoadPage(page: list.page + 1, pageSize: defaultPageSize));
     }
   }
 
@@ -89,7 +94,7 @@ abstract class PageableListBloc<T> extends SaveBloc {
 
   @protected
   void emitCurrentList(Emitter emit) {
-    emit(ViewPageableList<T>(
+    emit(PageableListState<T>(
         list: list, page: list.page, pageSize: list.pageSize));
   }
 

@@ -1,7 +1,7 @@
 import 'package:flutter_bloc_boost/blocs/states/base_state.dart';
 
-class ViewPageableList<T> extends BaseState {
-  ViewPageableList({
+class PageableListState<T> extends BaseState {
+  PageableListState({
     required this.list, 
     required this.page, 
     required this.pageSize});
